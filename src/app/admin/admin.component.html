@@ -1,0 +1,44 @@
+<p>
+  admin works!
+</p>
+<div class="wrapper">
+  <div class="top-header">
+      <mat-toolbar>
+          <p id="btn-side"><button mat-button (click)="sidenav.toggle()">
+              <i class="material-icons">
+                  list
+                  </i>
+          </button></p>
+          <p>Admin Dashboard</p><br>
+          
+      </mat-toolbar>
+  </div>
+
+  <div class="side-nav-mat">
+      <mat-sidenav-container>
+          <mat-sidenav mode ="side" #sidenav  
+          (closed)="events.push('open!')" opened>
+      
+          <mat-nav-list>
+                  <a mat-list-item routerLink='testing'>
+                        <i class="material-icons">
+                          account_balance
+                          </i>
+                    Testing</a>
+                  <a mat-list-item routerLink='second'>Second Component</a>
+                </mat-nav-list>
+        </mat-sidenav>
+              
+      
+          
+              <mat-sidenav-content>
+                 
+                
+                <router-outlet></router-outlet>
+      
+              </mat-sidenav-content>
+      
+        </mat-sidenav-container>
+  </div>
+</div>
+<router-outlet></router-outlet>
