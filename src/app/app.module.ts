@@ -8,6 +8,9 @@ import { AdminComponent } from './admin/admin.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {AppRoutes} from './routes.modules';
 import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import {MatListModule} from '@angular/material/list';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatIconModule,
+    MatCardModule,
+    MatGridListModule,
     RouterModule.forRoot(AppRoutes),
     BrowserAnimationsModule
   ],
