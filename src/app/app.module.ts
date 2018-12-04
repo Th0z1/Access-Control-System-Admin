@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { AdminComponent } from './admin/admin.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {AppRoutes} from './routes.modules';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { AdminComponent } from './admin/admin.component';
   ],
   imports: [
     BrowserModule,
+    MatToolbarModule,
     MatSidenavModule,
+    MatListModule,
+    RouterModule.forRoot(AppRoutes),
     BrowserAnimationsModule
   ],
   providers: [],
