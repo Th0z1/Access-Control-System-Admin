@@ -20,6 +20,8 @@ import { RemoveComponent } from './remove/remove.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import {MatButtonModule} from '@angular/material/button';
     NavbarComponent,
     AddComponent,
     OrgComponent,
-    RemoveComponent
+    RemoveComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatFormFieldModule,
     MatSelectModule,
     MatButtonModule,
+    MatInputModule,
     RouterModule.forRoot(AppRoutes),
     BrowserAnimationsModule
   ],

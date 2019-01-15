@@ -7,22 +7,11 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pages = [
-    {name : 'Orgarnisation', page: 'Orgarnisation'},
-    {name : 'Add', page: 'Add'},
-    {name : 'Remove', page: 'Remove'}
-  ];
+  
   
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor() { }
 
-  navigator(page){
-    console.log(page.name);
-    if(page.name == "jbjhjb"){
-      
-    }
-  }
   
-
   title = 'dashboard';
 }
