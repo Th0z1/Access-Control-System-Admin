@@ -22,7 +22,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { SignInComponent } from './sign-in/sign-in.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore'
+import { environment } from 'src/environments/environment';
+import { UserService } from './services/user-service';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     SignInComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     BrowserModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -51,7 +56,9 @@ import { SignInComponent } from './sign-in/sign-in.component';
     RouterModule.forRoot(AppRoutes),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
