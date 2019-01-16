@@ -11,7 +11,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { EscapeComponent } from './escape/escape.component';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { AddComponent } from './add/add.component';
@@ -26,12 +26,13 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore'
 import { environment } from 'src/environments/environment';
 import { UserService } from './services/user-service';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
-    EscapeComponent,
     NavbarComponent,
     AddComponent,
     OrgComponent,
@@ -53,6 +54,8 @@ import { UserService } from './services/user-service';
     MatSelectModule,
     MatButtonModule,
     MatInputModule,
+    MatTreeModule,
+    MatCheckboxModule,
     RouterModule.forRoot(AppRoutes),
     BrowserAnimationsModule
   ],

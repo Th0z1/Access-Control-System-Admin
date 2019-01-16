@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import {Router} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -9,18 +8,12 @@ import {Router} from '@angular/router';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  pages = [
-    {name : 'Orgarnisation', page: 'Orgarnisation'},
-    {name : 'Add', page: 'Add'},
-    {name : 'Remove', page: 'Remove'}
-  ];
-
-  constructor(private router:Router) { 
-   
-  }
+  showFiller = false;
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-
   }
- 
+campus(){
+  this.router.navigate(['/add']);
+}
 }

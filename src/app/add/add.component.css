@@ -1,0 +1,23 @@
+#form-wrapper{
+    background: #6ab7ff;
+    padding: 50px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #login-form{
+  
+    width: 400px;
+    padding: 0 20px;
+  }
+  
+  .example-full-width{
+    width: 100%;
+  }
+  button{
+    margin: 0 auto;
+  }

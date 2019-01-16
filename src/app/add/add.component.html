@@ -1,3 +1,35 @@
-<p>
-  add works!
-</p>
+<h1 style="text-align:center">Admin</h1>
+
+<div id="form-wrapper">
+  <form id="login-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name">
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Surname"></textarea>
+    </mat-form-field>
+    <br>
+
+   
+    <mat-form-field class="example-full-width">
+      <mat-select placeholder="Organisation Name">
+        <mat-option *ngFor="let org of orgs" [value]="org.value">
+          {{org.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+   
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Staff Number"></textarea>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Cellphone Number"></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button (click) = "addCamp()" >Add Admin</button> 
+  </form>
